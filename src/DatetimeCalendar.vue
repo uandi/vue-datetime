@@ -14,8 +14,15 @@
       </div>
     </div>
     <div class="vdatetime-calendar__month">
-      <div class="vdatetime-calendar__month__weekday" v-for="weekday in weekdays">{{ weekday }}</div>
-      <div class="vdatetime-calendar__month__day" v-for="day in days" @click="selectDay(day)" :class="{'vdatetime-calendar__month__day--selected': day.selected, 'vdatetime-calendar__month__day--disabled': day.disabled}">
+      <div class="vdatetime-calendar__month__weekday" v-for="weekday in weekdays" :key="weekday">{{ weekday }}</div>
+      <div class="vdatetime-calendar__month__day"
+        v-for="day in days"
+        @click="selectDay(day)"
+        :class="{
+          'vdatetime-calendar__month__day--selected': day.selected,
+          'vdatetime-calendar__month__day--disabled': day.disabled
+        }"
+      >
         <span><span>{{ day.number }}</span></span>
       </div>
     </div>
