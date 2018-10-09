@@ -15,11 +15,13 @@ const {
   logError,
   write,
   banner,
-  name,
+  // name,
   moduleName,
   version,
   processStyle
 } = require('./utils')
+
+const name = 'vue-datetime'
 
 function rollupBundle ({ env }) {
   return rollup({

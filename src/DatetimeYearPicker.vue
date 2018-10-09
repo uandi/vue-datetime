@@ -26,11 +26,11 @@ export default {
     },
     minDate: {
       type: DateTime,
-      default: null,
+      default: null
     },
     maxDate: {
       type: DateTime,
-      default: null,
+      default: null
     }
   },
 
